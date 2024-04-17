@@ -4,9 +4,20 @@ const butInstall = document.getElementById('buttonInstall');
 // TODO: Add an event handler to the `beforeinstallprompt` event
 window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
-    window.deferredPrompt = event;
+    // Stash the event so it can be triggered later.
+    const installPromptEvent = event;
     // Show the install button
     butInstall.classList.toggle('hidden', false);
+    
+    butInstall.addEventListener('click', async () => {
+        // Show the install prompt
+        installPromptEvent.prompt();
+        // Wait for the user to respond to the prompt
+        const { outcome } = await installPromptEvent.userChoice;
+        // Hide the install button
+        butInstall.classList.toggle('hidden', true);
+    });
+
 });
 
 // TODO: Implement a click event handler on the `butInstall` element
