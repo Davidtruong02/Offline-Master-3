@@ -40,7 +40,7 @@ new StaleWhileRevalidate({
   ],
 }));
 
-registerRoute(
+/* registerRoute(
   ({ request }) =>
     request.destination === "style" ||
     request.destination === "script" ||
@@ -57,4 +57,4 @@ registerRoute(
     ],
   })
 );
-
+ */

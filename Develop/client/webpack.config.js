@@ -25,14 +25,10 @@ module.exports = () => {
         template: './index.html',
         title: 'JATE',
       }),
-      ...(isProduction
-        ? [
-            new InjectManifest({
-              swSrc: './src-sw.js',
-              swDest: 'sw.js',
-            }),
-          ]
-        : []),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'sw.js',
+      }),
       new WebpackPwaManifest({
         fingerprints: false,
         name: 'Just Another Text Editor',
