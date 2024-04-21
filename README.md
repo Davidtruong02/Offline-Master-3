@@ -69,7 +69,7 @@ THEN I should have proper build scripts for a webpack application
 ## Mock-Up
 The following animation demonstrates the application functionality:
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Develop/Assets/00-demo.gif)
+![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](Assets\00-demo.gif)
 ## License
 
 Copyright (c) 2024 David Truong
